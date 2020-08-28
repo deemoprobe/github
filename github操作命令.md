@@ -77,7 +77,7 @@ git pull --rebase origin master
 
 ### 分支
 
-默认使用master分支，但当存在多人并行作业时可以创建分支进行操作。
+默认使用master分支，但当存在多人并行作业时可以创建分支进行操作。在合并之前，分支和master之间互不影响。
 
 ```shell
 # 查看当前所在分支
@@ -86,6 +86,10 @@ git branch
 git checkout -b branch.name
 # 切换分支
 git checkout branch.name
+# 切换到上次用的分支
+git checkout -
+# 合并分支（切换到master上合并）
+git merge --no-ff deemoprobe
 ```
 
 ### 其他操作
