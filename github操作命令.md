@@ -42,6 +42,8 @@ ssh -T git@github.com
 
 ## Git操作
 
+### 初步提交
+
 ```shell
 # 准备好项目工程空目录/projects/github/
 cd ./projects/github/
@@ -49,7 +51,45 @@ cd ./projects/github/
 git init
 # 创建自己的工程文件
 ...
-# 暂存区添加自己的文件
+# 向本地暂存区添加自己的文件
 git add file.name
-# 
+# 提交到本地仓库
+git commit -m "操作记录说明"
+
+```
+
+### 提交到远程仓库
+
+```shell
+# 创建远程仓库
+在GitHub上创建一个空仓库-Create a new repository
+# 关联远程仓库，origin可自定义别名
+git remote add origin https://github.com/deemoprobe/github.git
+# 查看仓库别名
+git remote -v
+# (可选)如果远程仓库已经有文件，先拉下来同步到本地仓库，以默认的master分支为例
+git pull origin master
+# 推送本地仓库到远程仓库
+git push origin master
+# (可选)若遇到冲突，可用下面命令先合并文件再提交
+git pull --rebase origin master
+```
+
+### 分支
+
+默认使用master分支
+
+### 其他操作
+
+```shell
+# 查看仓库状态
+git status
+# 添加所有文件到本地暂存区
+git add A
+# 查看日志
+git log
+# 查看特定文件的git日志
+git log file.name
+# 查看更改前后差别
+git diff
 ```
