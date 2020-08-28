@@ -77,7 +77,15 @@ git pull --rebase origin master
 
 ### 分支
 
-默认使用master分支
+默认使用master分支，但当存在多人并行作业时可以创建分支进行操作。
+
+```shell
+# 查看当前所在分支
+git branch
+# 创建、切换分支
+git checkout -b branch.name
+# 
+```
 
 ### 其他操作
 
