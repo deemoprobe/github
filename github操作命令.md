@@ -92,6 +92,17 @@ git checkout -
 git merge --no-ff deemoprobe
 ```
 
+### 推送到分支
+
+```shell
+# 先切换到对应分支
+git checkout deemoprobe
+# (可选)在分支中修改文件
+...
+# 推送到分支
+git push -u origin deemoprobe
+```
+
 ### 其他操作
 
 ```shell
