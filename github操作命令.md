@@ -84,7 +84,7 @@ git pull --rebase origin master
 git branch
 # 创建分支
 git checkout -b branch.name
-# 切换分支
+# 切换分支，切换之前需要把分支上的操作先提交
 git checkout branch.name
 # 切换到上次用的分支
 git checkout -
@@ -103,6 +103,8 @@ git add A
 git log
 # 查看特定文件的git日志
 git log file.name
+# 以图表的形式查看分支
+git log --graph
 # 查看更改前后差别
 git diff
 ```
