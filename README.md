@@ -10,3 +10,6 @@ github常用操作汇总，主要内容如下：
 - 高级操作
 
 -->增加高级操作，克隆，版本回溯等
+git branch -a
+gitreset
+clone
