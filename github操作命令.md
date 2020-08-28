@@ -82,9 +82,10 @@ git pull --rebase origin master
 ```shell
 # 查看当前所在分支
 git branch
-# 创建、切换分支
+# 创建分支
 git checkout -b branch.name
-# 
+# 切换分支
+git checkout branch.name
 ```
 
 ### 其他操作
