@@ -112,6 +112,28 @@ git reflog
 git reset --hard hash.code
 ```
 
+### 克隆仓库到本地
+
+```shell
+# 克隆仓库(默认是master分支，标识默认是origin)
+git clone repo_name.git
+# 获取某一分支到本地
+git clone -b branch.name repo_name.git
+```
+
+### 高级操作
+
+```shell
+# 查看本地分支和远程分支（也就是查看所有分支）
+git branch -a
+# 删除未合并的本地分支
+git branch -D brach.name
+# 删除已合并的本地分支
+git branch -d branch.name
+# 删除远程分支
+git push origin --delete branch.name
+```
+
 ### 其他操作
 
 ```shell
