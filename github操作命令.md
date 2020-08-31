@@ -103,6 +103,15 @@ git checkout deemoprobe
 git push -u origin deemoprobe
 ```
 
+### 回溯历史版本
+
+```shell
+# 查看仓库操作日志
+git reflog
+# 利用哈希值恢复历史版本
+git reset --hard hash.code
+```
+
 ### 其他操作
 
 ```shell
@@ -118,4 +127,6 @@ git log file.name
 git log --graph
 # 查看更改前后差别
 git diff
+# 修改提交信息
+git commit --amend
 ```
