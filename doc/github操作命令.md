@@ -12,7 +12,7 @@ git是分散型版本管理系统，GitHub为开发者提供Git仓库的托管�
 - Git初始设置
 - 配置SSH Key
 
-### Git初始设置
+### Git初始设置-->-->
 
 ```shell
 # git全局配置
