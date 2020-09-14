@@ -12,7 +12,7 @@ git是分散型版本管理系统，GitHub为开发者提供Git仓库的托管�
 - Git初始设置
 - 配置SSH Key
 
-### Git初始设置-->-->
+### Git初始设置
 
 ```shell
 # git全局配置
@@ -131,7 +131,7 @@ git branch -D brach.name
 # 删除已合并的本地分支
 git branch -d branch.name
 # 删除远程分支
-git push origin --delete branch.name
+git push origin --delete branch.name2
 ```
 
 ### 其他操作
