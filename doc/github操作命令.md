@@ -67,17 +67,17 @@ git commit -m "操作记录说明"
 git remote add origin https://github.com/deemoprobe/github.git
 # 查看仓库别名
 git remote -v
-# (可选)如果远程仓库已经有文件，先拉下来同步到本地仓库，以默认的master分支为例
-git pull origin master
+# (可选)如果远程仓库已经有文件，先拉下来同步到本地仓库，以默认的main分支为例
+git pull origin main
 # 推送本地仓库到远程仓库
-git push origin master
+git push origin main
 # (可选)若遇到冲突，可用下面命令先合并文件再提交
-git pull --rebase origin master
+git pull --rebase origin main
 ```
 
 ### 分支
 
-默认使用master分支，但当存在多人并行作业时可以创建分支进行操作。在合并之前，分支和master之间互不影响。
+默认使用main分支，但当存在多人并行作业时可以创建分支进行操作。在合并之前，分支和main之间互不影响。
 
 ```shell
 # 查看当前所在分支
@@ -88,7 +88,7 @@ git checkout -b branch.name
 git checkout branch.name
 # 切换到上次用的分支
 git checkout -
-# 合并分支（切换到master上合并）
+# 合并分支（切换到main上合并）
 git merge --no-ff deemoprobe
 ```
 
@@ -115,7 +115,7 @@ git reset --hard hash.code
 ### 克隆仓库到本地
 
 ```shell
-# 克隆仓库(默认是master分支，标识默认是origin)
+# 克隆仓库(默认是main分支，标识默认是origin)
 git clone repo_name.git
 # 获取某一分支到本地
 git clone -b branch.name repo_name.git
