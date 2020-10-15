@@ -126,12 +126,27 @@ git clone -b branch.name repo_name.git
 ```shell
 # 查看本地分支和远程分支（也就是查看所有分支）
 git branch -a
+# 查看远程分支
+git branch -r
+# 查看本地和远程的分支关联关系
+git brancch -vv
+# 分支重命名
+git branch -m old new
+# 删除远程老分支
+git push origin :old
+# 上传新分支
+git push origin new
+# 把修改后的本地分支与远程分支关联
+git branch --set-upstream-to origin/new
 # 删除未合并的本地分支
-git branch -D brach.name
+git branch -D -r brach.name
 # 删除已合并的本地分支
-git branch -d branch.name
+git branch -d -r branch.name
 # 删除远程分支
 git push origin --delete branch.name2
+
+# 注意：如果是默认分支,是无法删除的,需要在GitHub-->Setting-->Branches更改
+# 默认分支后再删除之前的分支
 ```
 
 ### 其他操作
