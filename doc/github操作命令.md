@@ -75,7 +75,7 @@ git push origin main
 git pull --rebase origin main
 ```
 
-### 分支
+### 分支操作
 
 默认使用main分支，但当存在多人并行作业时可以创建分支进行操作。在合并之前，分支和main之间互不影响。
 
@@ -90,6 +90,27 @@ git checkout branch.name
 git checkout -
 # 合并分支（切换到main上合并）
 git merge --no-ff deemoprobe
+# 查看本地分支和远程分支（也就是查看所有分支）
+git branch -a
+# 查看远程分支
+git branch -r
+# 查看本地和远程的分支关联关系
+git brancch -vv
+# 分支重命名
+git branch -m old new
+# 删除远程老分支
+git push origin :old
+# 上传新分支
+git push origin new
+# 删除未合并的本地分支
+git branch -D -r brach.name
+# 删除已合并的本地分支
+git branch -d -r branch.name
+# 删除远程分支
+git push origin --delete branch.name2
+
+# 注意：如果是默认分支,是无法删除的,需要在GitHub-->Setting-->Branches更改
+# 默认分支后再删除之前的分支
 ```
 
 ### 推送到分支
@@ -119,34 +140,6 @@ git reset --hard hash.code
 git clone repo_name.git
 # 获取某一分支到本地
 git clone -b branch.name repo_name.git
-```
-
-### 高级操作
-
-```shell
-# 查看本地分支和远程分支（也就是查看所有分支）
-git branch -a
-# 查看远程分支
-git branch -r
-# 查看本地和远程的分支关联关系
-git brancch -vv
-# 分支重命名
-git branch -m old new
-# 删除远程老分支
-git push origin :old
-# 上传新分支
-git push origin new
-# 把修改后的本地分支与远程分支关联
-git branch --set-upstream-to origin/new
-# 删除未合并的本地分支
-git branch -D -r brach.name
-# 删除已合并的本地分支
-git branch -d -r branch.name
-# 删除远程分支
-git push origin --delete branch.name2
-
-# 注意：如果是默认分支,是无法删除的,需要在GitHub-->Setting-->Branches更改
-# 默认分支后再删除之前的分支
 ```
 
 ### 其他操作
