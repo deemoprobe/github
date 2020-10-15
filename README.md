@@ -24,6 +24,7 @@ vi ~/.gitconfig
 
 ```shell
 git config --global init.defaultBranch main
+# 查看配置
 vi ~/.gitconfig
 ```
 
@@ -49,7 +50,9 @@ vi ~/.gitconfig
 
 4. 修改GitHub的默认分支
 
+    ```shell
     在GitHub上对应仓库"Settings" -> "Branches",修改默认分支名
+    ```
 
 5. 删除`master`分支
 
